@@ -36,7 +36,7 @@ html {
 body {
     background-color: #171616;
     /* overflow: hidden; */
-    overflow-x: hidden;
+     overflow-x: hidden; 
 }
 
 p, span {
@@ -90,6 +90,16 @@ header {
     font-family: "Iosevka";
     font-size: 28px;
     color: var(--main-color);
+}
+
+.main-label-a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.main-label-a::selection {
+    background-color: transparent;
 }
 
 .nav-ul {
@@ -500,4 +510,199 @@ footer span {
     font-size: 18px;
     text-decoration: none;
     color: var(--text-color);
+}
+
+
+
+/* LOGIN.cshtml */
+
+.login-section {
+    margin: 50px 0px 50px 0px;
+    background-image: url(../assets/line_login.svg);
+}
+
+.log-form {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 30px 40px;
+    padding: 80px 0 60px 0;
+    margin: auto;
+    width: 650px;
+    text-align: center;
+}
+
+    .log-form h3, .log-form input {
+        margin-bottom: 25px;
+    }
+
+    .log-form h3 {
+        text-align: center;
+    }
+
+.log-header {
+    font-family: "Iosevka-Thin";
+    color: var(--main-color);
+    font-size: 42px;
+}
+
+.log-input {
+    border-radius: 15px;
+    padding: 15px 45px;
+    outline: none;
+    width: 400px;
+    font-size: 18px;
+}
+
+.log-save {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    padding: 15px 135px;
+    text-decoration: none;
+    margin-top: 80px;
+    font-family: "Iosevka";
+    font-size: 26px;
+    border-radius: 15px;
+    transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+    .log-save:hover {
+        background-color: transparent;
+        color: var(--accent-color);
+    }
+
+
+
+/* CHOOSEPHOTOS.cshtml */
+
+.choose {
+    margin: 50px 60px 10px 30px;
+}
+
+.choose-header-text {
+    font-family: "Iosevka-Thin";
+    font-size: 64px;
+    color: var(--main-color);
+    margin-bottom: 50px;
+}
+
+.choose-dyed-items {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.choose-dyed-item {
+    display: flex;
+    align-items: center;
+}
+
+.check-container {
+    display: block;
+    position: relative;
+    padding-left: 65px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .check-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.check-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.check-container input:checked ~ .checkmark {
+    background-color: var(--accent-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.check-container .checkmark:after {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    content: "V";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+.choose-img {
+    width: 450px;
+}
+
+.choose-img-prod {
+    width: 300px;
+}
+
+
+
+/* ALLPHOTOS.cshtml */
+
+.all-content {
+    display: flex;
+}
+
+.all-main {
+    background-color: rgba(255, 255, 255, 0.05);
+    background-image: url(../assets/allphotos_line.svg);
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    height: 700px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.all-header {
+    font-family: "Iosevka-Thin";
+    font-size: 68px;
+    color: var(--main-color);
+    margin-bottom: 150px;
+}
+
+.all-photos {
+    margin-left: 150px;
+}
+
+.main-width {
+    width: 400px;
+}
+
+.prod-width {
+    width: 400px;
+}
+
+.all-ph {
+    margin: 0px 20px 20px 0px;
 }
