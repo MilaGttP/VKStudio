@@ -7,7 +7,11 @@
         <input id="loginInput" class="log-input" type="text" placeholder="Введіть логін">
 
         <h3 class="log-header">Пароль</h3>
-        <input id="passwordInput" class="log-input" type="password" placeholder="Введіть пароль">
+        <div class="password-container">
+            <input id="passwordInput" class="log-input" type="password" placeholder="Введіть пароль">
+            <span id="togglePassword" class="eye-icon" onclick="togglePasswordVisibility()">&#128065;</span>
+
+        </div>
 
         <div>
             <button id="loginButton" class="log-save">Підтвердити</button>
@@ -15,7 +19,10 @@
     </div>
 </section>
 
+
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="~/js/login.js"></script>
+    <script src="~/js/passwordEye.js"></script>
 }
+    
