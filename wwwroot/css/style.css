@@ -570,10 +570,20 @@ footer span {
         color: var(--accent-color);
     }
 
+.password-container {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 140px;
+    transform: translateY(-95%);
+    font-size: 22px;
+}
 
 
 /* CHOOSEPHOTOS.cshtml */
-
 .choose {
     margin: 50px 60px 10px 30px;
 }
