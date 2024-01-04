@@ -1,27 +1,21 @@
 ﻿@page
 @model ChoosePhotosModel
-@{
-
-}
+@inject Services.IImageService ImageService
 
 <section class="choose" id="dyed">
     <h3 class="choose-header-text">Фарбування</h3>
 
     <div class="choose-dyed-items">
-        <div class="choose-dyed-item">
-            <label class="check-container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <img class="choose-img" src="assets/test_img.jpg" alt="image">
-        </div>
-        <div class="choose-dyed-item">
-            <label class="check-container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <img class="choose-img" src="assets/test_img.jpg" alt="image">
-        </div>
+        @foreach (var image in ImageService.GetDyedImages())
+        {
+            <div class="choose-dyed-item">
+                <label class="check-container">
+                    <input type="checkbox" asp-for="@image.IsVisible" class="visibilityCheckbox" data-image-id="@image.ID">
+                    <span class="checkmark"></span>
+                </label>
+                <img class="choose-img" src="@image.URL" alt="@image.Name">
+            </div>
+        }
     </div>
 </section>
 
@@ -29,20 +23,16 @@
     <h3 class="choose-header-text">Стрижки</h3>
 
     <div class="choose-dyed-items">
-        <div class="choose-dyed-item">
-            <label class="check-container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <img class="choose-img" src="assets/test_img.jpg" alt="image">
-        </div>
-        <div class="choose-dyed-item">
-            <label class="check-container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <img class="choose-img" src="assets/test_img.jpg" alt="image">
-        </div>
+        @foreach (var image in ImageService.GetCutImages())
+        {
+            <div class="choose-dyed-item">
+                <label class="check-container">
+                    <input type="checkbox" asp-for="@image.IsVisible" class="visibilityCheckbox" data-image-id="@image.ID">
+                    <span class="checkmark"></span>
+                </label>
+                <img class="choose-img" src="@image.URL" alt="@image.Name">
+            </div>
+        }
     </div>
 </section>
 
@@ -50,26 +40,20 @@
     <h3 class="choose-header-text">Товари</h3>
 
     <div class="choose-dyed-items">
-        <div class="choose-dyed-item">
-            <label class="check-container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <img class="choose-img-prod" src="assets/prod1.jpg" alt="image">
-        </div>
-        <div class="choose-dyed-item">
-            <label class="check-container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <img class="choose-img-prod" src="assets/prod2.jpg" alt="image">
-        </div>
-        <div class="choose-dyed-item">
-            <label class="check-container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <img class="choose-img-prod" src="assets/prod2.jpg" alt="image">
-        </div>
+        @foreach (var image in ImageService.GetProdImages())
+        {
+            <div class="choose-prod-item">
+                <label class="check-container">
+                    <input type="checkbox" asp-for="@image.IsVisible" class="visibilityCheckbox" data-image-id="@image.ID">
+                    <span class="checkmark"></span>
+                </label>
+                <img class="choose-img-prod" src="@image.URL" alt="@image.Name">
+            </div>
+        }
     </div>
 </section>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/updateImage.js"></script>
+}

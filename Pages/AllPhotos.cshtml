@@ -1,8 +1,6 @@
 ﻿@page
 @model AllPhotosModel
-@{
-
-}
+@inject Services.IImageService ImageService
 
 <section class="all-dyed" id="dyed">
     <div class="all-content">
@@ -10,12 +8,10 @@
             <h3 class="all-header">Фарбування</h3>
         </div>
         <div class="all-photos">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
+            @foreach (var image in ImageService.GetVisibleDyedImages())
+            {
+                <img src="@image.URL" alt="@image.Name" class="all-ph main-width">
+            }
         </div>
     </div>
 </section>
@@ -26,12 +22,10 @@
             <h3 class="all-header">Стрижки</h3>
         </div>
         <div class="all-photos">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
-            <img class="all-ph main-width" src="assets/test_img.jpg" alt="test_img">
+            @foreach (var image in ImageService.GetVisibleCutImages())
+            {
+                <img src="@image.URL" alt="@image.Name" class="all-ph main-width">
+            }
         </div>
     </div>
 </section>
@@ -42,12 +36,10 @@
             <h3 class="all-header">Товари</h3>
         </div>
         <div class="all-photos">
-            <img class="all-ph prod-width" src="assets/prod1.jpg" alt="test_img">
-            <img class="all-ph prod-width" src="assets/prod2.jpg" alt="test_img">
-            <img class="all-ph prod-width" src="assets/prod1.jpg" alt="test_img">
-            <img class="all-ph prod-width" src="assets/prod2.jpg" alt="test_img">
-            <img class="all-ph prod-width" src="assets/prod1.jpg" alt="test_img">
-            <img class="all-ph prod-width" src="assets/prod2.jpg" alt="test_img">
+            @foreach (var image in ImageService.GetVisibleProdImages())
+            {
+                <img src="@image.URL" alt="@image.Name" class="all-ph main-width br_img">
+            }
         </div>
     </div>
 </section>

@@ -1,8 +1,6 @@
 ﻿@page
 @model IndexModel
-@{
-    
-}
+@inject Services.IImageService ImageService
 
 <section class="first-screen" id="home">
     <div>
@@ -22,7 +20,7 @@
 <section class="second-screen" id="description">
     <div class="second-screen-main">
         <div class="second-screen-img">
-            <img src="assets/second_screen_photo.png" alt="studio photo">
+            <img src="assets/studio.png" alt="studio photo">
             <img src="assets/frame.svg" alt="frame image">
         </div>
         <div>
@@ -44,12 +42,10 @@
             </div>
         </div>
         <div class="third-screen-imgs">
-            <!-- остання -->
-            <img src="assets/test_img.jpg" alt="test_img">
-            <img src="assets/test_img.jpg" alt="test_img">
-            <img src="assets/test_img.jpg" alt="test_img">
-            <!-- перша -->
-            <img src="assets/test_img.jpg" alt="test_img">
+            @foreach (var image in ImageService.GetVisibleDyedImages().Take(4))
+            {
+                <img src="@image.URL" alt="@image.Name">
+            }
         </div>
     </div>
 </section>
@@ -57,10 +53,10 @@
 <section class="fourth-screen" id="cut">
     <div class="flex-align">
         <div class="fourth-screen-imgs">
-            <img src="assets/test_img.jpg" alt="test_img">
-            <img src="assets/test_img.jpg" alt="test_img">
-            <img src="assets/test_img.jpg" alt="test_img">
-            <img src="assets/test_img.jpg" alt="test_img">
+            @foreach (var image in ImageService.GetVisibleCutImages().Take(4))
+            {
+                <img src="@image.URL" alt="@image.Name">
+            }
         </div>
         <div>
             <div class="line"></div>
@@ -83,7 +79,14 @@
                 <img src="assets/frame_products.svg" alt="frame img">
             </div>
             <div class="carousel-container">
-                <div class="carousel-track" id="carouselTrack"></div>
+                <div id="carouselTrack" class="carousel-track">
+                    @foreach (var image in ImageService.GetVisibleProdImages())
+                    {
+                        <div class="carousel-slide">
+                            <img src="@image.URL" alt="Slide">
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
@@ -113,3 +116,8 @@
             <span id="closeButton" class="close-button">×</span>
         </div>
 </section>
+
+@section Scripts {
+    <script src="~/js/carousel.js"></script>
+    <script src="~/js/map.js"></script>
+}
