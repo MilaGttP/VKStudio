@@ -1,0 +1,123 @@
+﻿@page
+@model IndexModel
+@inject Services.IImageService ImageService
+
+<section class="first-screen" id="home">
+    <div>
+        <div class="video-div">
+            <video id="mainVideo" class="video" autoplay muted loop>
+                <source src="assets/main.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="main-label-content">
+            <p class="main-label-text">СТВОРЮЄМО НЕ ЗАЧІСКУ, А ВАШ СТИЛЬ</p>
+            <!-- <p class="main-label-text">СТВОРЮЄМО НЕ ЗАЧІСКУ, А ВАШ НАСТРІЙ</p> -->
+        </div>
+    </div>
+</section>
+
+<section class="second-screen" id="description">
+    <div class="second-screen-main">
+        <div class="second-screen-img">
+            <img src="assets/studio.png" alt="studio photo">
+            <img src="assets/frame.svg" alt="frame image">
+        </div>
+        <div>
+            <p class="description"> <span class="description-span">VK Studio</span> - місце, де ваш стиль стає унікальним вираженням вашої особистості, а ваш настрій відзеркалюється в кожному русі волосся. Ми не просто створюємо зачіски, ми втілюємо ваші ідеї та прагнення у волоссі, роблячи кожен візуальний образ неповторним шедевром </p>
+        </div>
+    </div>
+</section>
+
+<section class="third-screen" id="dyed">
+    <div class="flex-align">
+        <div>
+            <div>
+                <div class="line"></div>
+                <h3 class="header-text">Фарбування</h3>
+                <div class="line"></div>
+            </div>
+            <div class="act-container">
+                <a asp-page="/AllPhotos" class="gotoaction left-sided">Усі фото</a>
+            </div>
+        </div>
+        <div class="third-screen-imgs">
+            @foreach (var image in ImageService.GetVisibleDyedImages().Take(4))
+            {
+                <img src="@image.URL" alt="@image.Name">
+            }
+        </div>
+    </div>
+</section>
+
+<section class="fourth-screen" id="cut">
+    <div class="flex-align">
+        <div class="fourth-screen-imgs">
+            @foreach (var image in ImageService.GetVisibleCutImages().Take(4))
+            {
+                <img src="@image.URL" alt="@image.Name">
+            }
+        </div>
+        <div>
+            <div class="line"></div>
+            <h3 class="header-text">Стрижки</h3>
+            <div class="line"></div>
+            <div class="act-container">
+                <a asp-page="/AllPhotos" class="gotoaction right-sided">Усі фото</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fifth-screen" id="products">
+    <div class="flex-align">
+        <div class="fifth-screen-content">
+            <h3 class="header-text higher">Товари</h3>
+        </div>
+        <div>
+            <div class="carousel-frame">
+                <img src="assets/frame_products.svg" alt="frame img">
+            </div>
+            <div class="carousel-container">
+                <div id="carouselTrack" class="carousel-track">
+                    @foreach (var image in ImageService.GetVisibleProdImages())
+                    {
+                        <div class="carousel-slide">
+                            <img src="@image.URL" alt="Slide">
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sixth-screen" id="contacts">
+        <div class="flex">
+            <a href="#" class="map-button" id="showImage">Мапа</a>
+            <div class="contacts-content">
+                <span class="center-span">Контакти</span>
+                <span>Вікторія</span>
+                <div class="red-back-span-div">
+                    <span class="red-back-span">+380964954445</span>
+                </div>
+                <span>Наталія</span>
+                <div class="red-back-span-div">
+                    <span class="red-back-span">+380679396615</span>
+                </div>
+                <div class="white-back-p-div">
+                    <p class="white-back-p">Вул. Хлібна, 13</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="hiddenImageContainer">
+            <img src="assets/map.svg" alt="Hidden Image">
+            <span id="closeButton" class="close-button">×</span>
+        </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/slides.js"></script>
+    <script src="~/js/map.js"></script>
+}
