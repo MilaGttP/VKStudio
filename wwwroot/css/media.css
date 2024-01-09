@@ -1,13 +1,256 @@
 ﻿@media screen and (max-width: 1200px) {
+    header {
+        justify-content: space-around;
+        padding: 20px 15px 20px 15px;
+    }
+    .main-label-text {
+        font-size: 76px;
+    }
+    .menu-item-div {
+        width: 15%;
+    }
+    .menu-item, nav a {
+        font-size: 14px;
+    }    
+    .nav-ul {
+        width: 265px;
+    }
+    .main-label {
+        font-size: 26px;
+        margin-left: 140px;
+    }
+    .second-screen {
+        margin: 100px 60px 0px 100px;
+    }
+    .second-screen-main img {
+        width: 320px;
+    }
+    .description {
+        font-size: 28px;
+    }
+    .line {
+        width: 320px;
+        margin: 20px 0px 20px 0px;
+    }
+    .header-text {
+        font-size: 52px;
+    }
+    .third-screen-imgs img, .fourth-screen-imgs img {
+        width: 400px;
+    }
 
+    .third-screen-imgs:hover img, .fourth-screen-imgs:hover img {
+        width: 320px;
+    }
+
+    .third-screen-imgs img:nth-child(1) { top: 0; left: 200px; }
+    .third-screen-imgs img:nth-child(2) { top: -30px; left: 80px; }
+    .third-screen-imgs img:nth-child(3) { top: -100px; left: 200px; }
+    .third-screen-imgs img:nth-child(4) { top: -40px; left: 270px; }
+
+    .third-screen-imgs:hover img:nth-child(1) { top: 60%; left: 60%; }
+    .third-screen-imgs:hover img:nth-child(2) { top: 60%; left: 8%; }
+    .third-screen-imgs:hover img:nth-child(3) { top: -90%; left: 8%; }
+    .third-screen-imgs:hover img:nth-child(4) { top: -90%; left: 60%; }
+
+    .fourth-screen {
+        margin: 300px 0px 0px 150px; 
+    }
+
+    .fourth-screen-imgs img:nth-child(1) { top: 0; right: 200px; }
+    .fourth-screen-imgs img:nth-child(2) { top: -30px; right: 320px; }
+    .fourth-screen-imgs img:nth-child(3) { top: -100px; right: 210px; }
+    .fourth-screen-imgs img:nth-child(4) { top: -40px; right: 140px; }
+
+    .fourth-screen-imgs:hover img:nth-child(1) { top: 62%; right: 14%; }
+    .fourth-screen-imgs:hover img:nth-child(2) { top: 62%; right: 65%; }
+    .fourth-screen-imgs:hover img:nth-child(3) { top: -90%; right: 65%; }
+    .fourth-screen-imgs:hover img:nth-child(4) { top: -90%; right: 14%; }
+
+    .fifth-screen {
+        margin: 300px 0px 0px 20px;
+    }
+
+    .carousel-slide {
+        width: 370px;
+    }
+
+    .carousel-container img {
+        width: 95%;
+    }
+
+    .carousel-frame img {
+        width: 420px;
+    }
+
+    .contacts-content {
+        margin-left: 150px; 
+    }    
+
+    footer {
+        padding: 35px 25px 30px 25px;
+    }
+
+    .footer-btn {
+        margin-right: 30px;
+        font-size: 20px;
+        padding: 18px 32px;
+    }
+
+    .footer-btns {
+        margin-left: 80px;
+    }
+
+    .footer-img {
+        width: 150px;
+    }
+
+    .footer-down {
+        margin-top: 35px;
+    }
 }
 
 @media screen and (max-width: 992px) {
+    .menu-item-div, .menu-item, nav, .phone-numbers {
+        display: none;
+    }
+    .main-label {
+        font-size: 26px;
+        margin: 0 auto;
+        margin-right: 30px;
+    }
+    .main-label-a {
+        text-align: center;
+        margin: 0 auto;
+    }
+    header {
+        justify-content: space-between;
+    }
+    .burger-menu {
+        visibility: visible;
+        padding-left: 95%;
+        padding-top: 4%;
+    }
+    .main-label-text {
+        font-size: 68px;
+    }
+    .second-screen-main img {
+        width: 280px;
+    }
+    .second-screen-img {
+        margin-right: 65px;
+    }
+    .description {
+        font-size: 24px;
+    }
+    .line {
+        width: 250px;
+        margin: 15px 0px 15px 0px;
+    }
+    .header-text {
+        font-size: 40px;
+    }
+    .third-screen-imgs img, .fourth-screen-imgs img {
+        width: 320px;
+    }
+    .third-screen-imgs:hover img, .fourth-screen-imgs:hover img {
+        width: 260px;
+    }
 
+    .third-screen-imgs img:nth-child(1) { top: 0; left: 170px; }
+    .third-screen-imgs img:nth-child(2) { top: -30px; left: 40px; }
+    .third-screen-imgs img:nth-child(3) { top: -80px; left: 170px; }
+    .third-screen-imgs img:nth-child(4) { top: -40px; left: 240px; }
+
+    .third-screen-imgs:hover img:nth-child(1) { top: 55%; left: 63%; }
+    .third-screen-imgs:hover img:nth-child(2) { top: 55%; left: 8%; }
+    .third-screen-imgs:hover img:nth-child(3) { top: -70%; left: 8%; }
+    .third-screen-imgs:hover img:nth-child(4) { top: -70%; left: 63%; }
+
+    .fourth-screen {
+        margin: 250px 0px 0px 150px; 
+    }
+
+    .fourth-screen-imgs img:nth-child(1) { top: 0; right: 150px; }
+    .fourth-screen-imgs img:nth-child(2) { top: -30px; right: 240px; }
+    .fourth-screen-imgs img:nth-child(3) { top: -80px; right: 160px; }
+    .fourth-screen-imgs img:nth-child(4) { top: -40px; right: 50px; }
+
+    .fourth-screen-imgs:hover img:nth-child(1) { top: 55%; right: 8%; }
+    .fourth-screen-imgs:hover img:nth-child(2) { top: 55%; right: 70%; }
+    .fourth-screen-imgs:hover img:nth-child(3) { top: -70%; right: 70%; }
+    .fourth-screen-imgs:hover img:nth-child(4) { top: -70%; right: 8%; }
+
+    .fifth-screen {
+        margin: 250px 0px 0px 20px;
+    }
+    .carousel-slide {
+        width: 340px;
+    }
+    .carousel-container img {
+        width: 95%;
+    }
+    .carousel-frame img {
+        width: 390px;
+    }
+    .map-button {
+        display: none;
+    }
+    .contacts-content {
+        margin: 0 auto;
+    }
+    .contacts-content span {
+        font-size: 28px;
+    }
+    .white-back-p-div {
+        margin: 130px 0px 0px 200px;
+    }
+    .white-back-p {
+        font-size: 28px;
+    }
+    .footer-btns {
+        margin-left: 25px;
+    }
+    .footer-btn {
+        margin-right: 25px;
+        font-size: 16px;
+        padding: 15px 30px;
+    }
+    .footer-img {
+        width: 120px;
+    }
+    footer span {
+        font-family: "Iosevka";
+        font-size: 16px;
+        margin-right: 30px;
+    }
+    .footer-down {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-
+    .main-label {
+        font-size: 24px;
+    }
+    .burger-menu {
+        padding-top: 4.8%;
+    } 
+    .menu {
+        margin-right: 250px;
+    }
+    .main-label-text {
+        font-size: 58px;
+    }
+    .second-screen-main img {
+        width: 250px;
+    }
+    .second-screen-img {
+        margin-right: 55px;
+    }
+    .description {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 576px) {

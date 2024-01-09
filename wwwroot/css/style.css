@@ -39,7 +39,7 @@ body {
      overflow-x: hidden; 
 }
 
-p, span {
+p, span, h2, h3, h4 {
     -webkit-user-select: none; 
     -moz-user-select: none; 
     -ms-user-select: none; 
@@ -60,6 +60,95 @@ p, span {
 .flex {
     display: flex;
     justify-content: space-between;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    transition: right 0.3s ease;
+    visibility: hidden;
+}
+
+.burger-icon, .bar {
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu {
+    display: none;
+    margin-top: 40px;
+    margin-right: 285px;
+    width: 100%;
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.menu a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: ease-in-out 0.3s;
+    margin-bottom: 15px;
+    font-family: "Iosevka";
+    font-size: 26px;
+}
+
+.menu a:hover {
+    color: var(--accent-color);
+}
+
+.dark-background {
+    position: fixed;
+    top: 0;
+    right: 20%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    display: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.dark-background.open {
+    display: block;
+    transform: translateX(50%);
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(10px);
+    z-index: 0;
 }
 
 header {
@@ -120,6 +209,7 @@ header {
     -webkit-filter: blur(2px);
     width: 100%;
     position: relative;
+    z-index: -2;
 }
 
 .video-div::before {
@@ -144,7 +234,7 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: -1;
     width: 80%;
     padding: 20px;
     text-align: center;
@@ -159,7 +249,7 @@ header {
 }
 
 .second-screen {
-    margin: 100px 150px 0px 150px;
+    margin: 150px 150px 0px 150px;
 }
 
 .second-screen-main {
@@ -174,8 +264,9 @@ header {
 }
   
 .second-screen-main img {
-    width: 420px;
+    width: 450px;
     display: block;
+    border-radius: 35% 35% 0 0;
 }
   
 .second-screen-main img:nth-child(2) {
@@ -227,6 +318,7 @@ header {
 }
 
 .gotoaction {
+    z-index: 1;
     padding: 10px 20px;
     background-color: var(--main-color);
     color: var(--text-color);
@@ -252,6 +344,7 @@ header {
 }
 
 .third-screen-imgs img {
+    z-index: 1;
     position: absolute;
     width: 100%;
     box-sizing: border-box;
@@ -288,6 +381,7 @@ header {
 }
 
 .fourth-screen-imgs img {
+    z-index: 1;
     position: absolute;
     width: 100%;
     box-sizing: border-box;
@@ -341,6 +435,7 @@ header {
     display: flex;
     transition: transform 0.8s ease-in-out;
     white-space: nowrap;
+    z-index: -1;
 }
   
 .carousel-slide {
@@ -360,6 +455,10 @@ header {
 .sixth-screen {
     margin: 250px 0px 100px 0px;
     background-image: url(../assets/line1.svg);
+}
+
+.map-div {
+    z-index: 1;
 }
 
 .map-button {
@@ -476,6 +575,7 @@ footer {
 
 .footer-btns {
     margin-left: 150px;
+    z-index: 1;
 }
 
 .footer-btn {
@@ -503,6 +603,11 @@ footer span {
     font-family: "Iosevka";
     font-size: 18px;
     margin-right: 60px;
+}
+
+.footer-inf span {
+    display: block;
+    margin-bottom: 8px;
 }
 
 .go-up { 
@@ -717,7 +822,7 @@ footer span {
 }
 
 .main-width {
-    width: 400px;
+    width: 350px;
 }
 
 .prod-width {
