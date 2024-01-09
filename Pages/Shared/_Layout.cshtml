@@ -11,6 +11,20 @@
 </head>
 
 <body>
+    <div class="dark-background" id="darkBackground"></div>
+    <div class="burger-menu" onclick="toggleBurgerMenu()">
+        <div class="burger-icon" id="burgerIcon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu" id="burgerMenu">
+            <a href="#dyed">Фарбування</a>
+            <a href="#cut">Стрижки</a>
+            <a href="#products">Товари</a>
+            <a href="#contacts">Контакти</a>
+        </div>
+    </div>
     <header>
         <a asp-page="/Index">
             <div class="logo">
@@ -61,12 +75,13 @@
                 <a class="footer-btn" href="#contacts">Контакти</a>
             </div>
             <div>
-                <img src="assets/logo.svg" alt="logo img">
+                <img class="footer-img" src="assets/logo.svg" alt="logo img">
             </div>
         </div>
         <div class="align footer-content footer-down">
-            <div>
-                <span>Ⓒ 2023 VK Studio</span>
+            <div class="footer-inf">
+                <span>Ⓒ 2024 VK Studio</span>
+                <span>Ⓒ MilaGttP</span>
             </div>
             <div>
                 <span>+380964954445</span>
@@ -78,6 +93,8 @@
     </footer>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script src="~/js/burgerMenu.js"></script>
 
 </body>
 </html>
