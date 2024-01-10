@@ -294,6 +294,9 @@
     .carousel-frame img {
         width: 330px;
     }   
+    .contacts-content * {
+        font-size: 25px;
+    }
     footer {
         display: flex;
         justify-content: space-around;
