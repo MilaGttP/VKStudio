@@ -66,16 +66,17 @@ p, span, h2, h3, h4 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: 20px;
     box-sizing: border-box;
     z-index: 1;
-    transition: right 0.3s ease;
+    transition: left 0.3s ease;
     visibility: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .burger-icon, .bar {
@@ -105,11 +106,10 @@ p, span, h2, h3, h4 {
 .menu {
     display: none;
     margin-top: 40px;
-    margin-right: 285px;
     width: 100%;
     text-align: left;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     z-index: 1;
 }
 
@@ -131,10 +131,10 @@ p, span, h2, h3, h4 {
 .dark-background {
     position: fixed;
     top: 0;
-    right: 20%;
+    left: 0;
     transform: translateX(-50%);
-    width: 50%;
-    height: 100vh;
+    width: 30%;
+    height: 81vh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
     display: none;
@@ -144,7 +144,7 @@ p, span, h2, h3, h4 {
 
 .dark-background.open {
     display: block;
-    transform: translateX(50%);
+    transform: translateX(-50%);
     opacity: 1;
     background: rgba(0, 0, 0, 0.20);
     backdrop-filter: blur(10px);
@@ -429,6 +429,7 @@ header {
 .carousel-container {
     width: 100%;
     overflow: hidden;
+    box-sizing: border-box;
 }
   
 .carousel-track {
@@ -524,7 +525,6 @@ body.no-scroll {
 }
 
 .contacts-content span {
-    font-size: 32px;
     font-family: "Iosevka";
     color: var(--main-color);
     display: block;
@@ -533,6 +533,11 @@ body.no-scroll {
 
 .center-span {
     text-align: center;
+    font-size: 32px;
+}
+
+.names-span {
+    font-size: 32px;
 }
 
 .red-back-span-div {
@@ -544,6 +549,7 @@ body.no-scroll {
     padding: 10px 100px 10px 40px;
     border-radius: 20px;
     width: 85%;
+    font-size: 32px;
 }
 
 .white-back-p-div {
@@ -566,6 +572,8 @@ footer {
 }
 
 .footer-content {
+    display: flex;  
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -588,6 +596,7 @@ footer {
     border-radius: 40px;
     transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
     margin-right: 45px;
+    text-align: center;
 }
 
 .footer-btn:hover {
