@@ -300,11 +300,10 @@
     footer {
         display: flex;
         justify-content: space-around;
-        align-items: center;
     }
     .footer-content {
         flex-direction: column;
-        justify-content: initial;
+        justify-content: space-around;
     }
     .footer-content img {
         margin-bottom: 10px;
@@ -325,6 +324,12 @@
     .footer-down span,  .footer-down a {
         display: block;
         margin-bottom: 20px;
+    }
+    .footer-all-inf {
+        order: 1;
+    }
+    .footer-inf {
+        order: 2;
     }
 }
 
