@@ -23,7 +23,7 @@ html {
 
 :root {
     --main-color: #FFFFFF;
-    --accent-color: rgb(227, 54, 54);
+    --accent-color: #e33636;
     --text-color: #000000;
 }
 
@@ -133,7 +133,7 @@ p, span, h2, h3, h4 {
     top: 0;
     left: 0;
     transform: translateX(-50%);
-    width: 40%;
+    width: 450px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
@@ -422,7 +422,7 @@ header {
 .carousel-frame img {
     position: absolute;
     z-index: 2; 
-    margin: -30px -35px ;
+    margin: -30px -35px;
     width: 450px;
 }
 

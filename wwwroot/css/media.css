@@ -227,6 +227,7 @@
 @media screen and (max-width: 768px) {
     .main-label {
         font-size: 24px;
+        margin-left: 45px;
     }
     .main-label-text {
         font-size: 58px;
@@ -334,9 +335,269 @@
 }
 
 @media screen and (max-width: 576px) {
+    .main-label {
+        font-size: 22px;
+    }
+    .main-label-content {
+        padding: 0;
+    }
+    .main-label-text {
+        font-size: 48px;
+    }
+    .second-screen {
+        margin: 80px 40px 0px 50px;
+    }
+    .second-screen-img {
+        display: none;
+    }
+    .description {
+        font-size: 20px;
+    }
+
+    .third-screen {
+        margin: 100px 20px 0px 0px;
+    }  
+
+    .dyed-div {
+        display: block;
+    }
+    .dyed-div-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .gotoaction {
+        margin-top: 15px;
+    }
+
+    .third-screen-imgs img, .fourth-screen-imgs img {
+        width: 350px;
+    }
+
+    .third-screen-imgs:hover img, .fourth-screen-imgs:hover img {
+        width: 235px;
+    }
+
+    .third-screen-imgs img:nth-child(1) { top: 0; left: 28%; }
+    .third-screen-imgs img:nth-child(2) { top: 0; left: 23%; }
+    .third-screen-imgs img:nth-child(3) { top: 0; left: 13%; }
+    .third-screen-imgs img:nth-child(4) { top: 0; left: 5%; }
+
+    .third-screen-imgs:hover img:nth-child(1) { top: 105%; left: 45%; }
+    .third-screen-imgs:hover img:nth-child(2) { top: 105%; left: 5%; }
+    .third-screen-imgs:hover img:nth-child(3) { top: -5%; left: 5%; }
+    .third-screen-imgs:hover img:nth-child(4) { top: -5%; left: 45%; }
+
+
+    .fourth-screen {
+        margin: 30px 0px 0px 20px; 
+    }
+
+    .cut-div {
+        display: block;
+    }
+        
+    .cut-div-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        margin-left: auto;
+    }
+        
+    .cut-div-content-text {
+        order: 1;
+    }
+    .fourth-screen-imgs {
+        order: 1;
+    }
     
+    .fourth-screen-imgs img:nth-child(1) { top: 200%; right: 21%; }
+    .fourth-screen-imgs img:nth-child(2) { top: 200%; right: 29%; }
+    .fourth-screen-imgs img:nth-child(3) { top: 200%; right: 37%; }
+    .fourth-screen-imgs img:nth-child(4) { top: 200%; right: 45%; }
+
+    .fourth-screen-imgs:hover img:nth-child(1) { top: 315%; right: 25%; }
+    .fourth-screen-imgs:hover img:nth-child(2) { top: 315%; right: 62%; }
+    .fourth-screen-imgs:hover img:nth-child(3) { top: 205%; right: 62%; }
+    .fourth-screen-imgs:hover img:nth-child(4) { top: 205%; right: 25%; }
+
+    .fifth-screen {
+        margin: 450px 0px 0px 20px; 
+    }
+    .carousel-slide {
+        width: 220px;
+    }
+    .carousel-frame img {
+        width: 270px;
+    }   
+    .contacts-content {
+        width: 450px;
+        padding: 40px 40px 60px 40px;
+    }
+    .white-back-p-div {
+        margin: 120px 0px 0px 130px;
+    }
+    .names-span, .red-back-span, .white-back-p {
+        font-size: 20px;
+    }
+    .footer-btn {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .third-screen-imgs img:nth-child(1) { top: 0; left: 20%; }
+    .third-screen-imgs img:nth-child(2) { top: 0; left: 15%; }
+    .third-screen-imgs img:nth-child(3) { top: 0; left: 10%; }
+    .third-screen-imgs img:nth-child(4) { top: 0; left: 5%; }
+
+    .third-screen-imgs:hover img, .fourth-screen-imgs:hover img {
+        width: 200px;
+    }
+
+    .third-screen-imgs:hover img:nth-child(1) { top: 90%; left: 41%; }
+    .third-screen-imgs:hover img:nth-child(2) { top: 90%; left: 5%; }
+    .third-screen-imgs:hover img:nth-child(3) { top: -5%; left: 5%; }
+    .third-screen-imgs:hover img:nth-child(4) { top: -5%; left: 41%; }
+
+    .fourth-screen-imgs img:nth-child(1) { top: 200%; right: 30%; }
+    .fourth-screen-imgs img:nth-child(2) { top: 200%; right: 35%; }
+    .fourth-screen-imgs img:nth-child(3) { top: 200%; right: 40%; }
+    .fourth-screen-imgs img:nth-child(4) { top: 200%; right: 45%; }
+
+    .fourth-screen-imgs:hover img:nth-child(1) { top: 300%; right: 35%; }
+    .fourth-screen-imgs:hover img:nth-child(2) { top: 300%; right: 68%; }
+    .fourth-screen-imgs:hover img:nth-child(3) { top: 205%; right: 68%; }
+    .fourth-screen-imgs:hover img:nth-child(4) { top: 205%; right: 35%; }
 }
 
 @media screen and (max-width: 480px) {
-    
+    .main-label-text {
+        font-size: 40px;
+    }
+    .description {
+        font-size: 19px;
+    }
+    .line {
+        width: 190px;
+    }
+    .header-text {
+        font-size: 28px;
+    }
+    .gotoaction {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    .third-screen {
+        margin: 90px 20px 0px 0px;
+    }  
+    .third-screen-imgs img, .fourth-screen-imgs img {
+        width: 320px;
+    }
+    .third-screen-imgs:hover img, .fourth-screen-imgs:hover img {
+        width: 180px;
+    }
+
+    .third-screen-imgs img:nth-child(1) { top: 0; left: 14%; }
+    .third-screen-imgs img:nth-child(2) { top: 0; left: 11%; }
+    .third-screen-imgs img:nth-child(3) { top: 0; left: 8%; }
+    .third-screen-imgs img:nth-child(4) { top: 0; left: 5%; }
+
+    .third-screen-imgs:hover img:nth-child(1) { top: 80%; left: 35%; }
+    .third-screen-imgs:hover img:nth-child(2) { top: 80%; left: 5%; }
+    .third-screen-imgs:hover img:nth-child(3) { top: -5%; left: 5%; }
+    .third-screen-imgs:hover img:nth-child(4) { top: -5%; left: 35%; }
+
+    .fourth-screen-imgs img:nth-child(1) { top: 200%; right: 41%; }
+    .fourth-screen-imgs img:nth-child(2) { top: 200%; right: 44%; }
+    .fourth-screen-imgs img:nth-child(3) { top: 200%; right: 47%; }
+    .fourth-screen-imgs img:nth-child(4) { top: 200%; right: 50%; }
+
+    .fourth-screen-imgs:hover img:nth-child(1) { top: 295%; right: 38%; }
+    .fourth-screen-imgs:hover img:nth-child(2) { top: 295%; right: 68%; }
+    .fourth-screen-imgs:hover img:nth-child(3) { top: 205%; right: 68%; }
+    .fourth-screen-imgs:hover img:nth-child(4) { top: 205%; right: 38%; }
+
+    .fifth-screen {
+        margin: 400px 0px 0px 10px; 
+    }
+    .fifth-screen-content {
+        margin-right: 80px;
+        margin-left: 15px;
+    }
+    .sixth-screen {
+        margin: 220px 0px 100px 0px;
+    }
+    .contacts-content {
+        width: 385px;
+        padding: 30px 40px 50px 40px;
+    }
+    .white-back-p-div {
+        margin: 100px 0px 0px 80px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .third-screen-imgs img, .fourth-screen-imgs img {
+        width: 250px;
+    }
+    .third-screen-imgs:hover img, .fourth-screen-imgs:hover img {
+        width: 160px;
+    }
+
+    .third-screen-imgs img:nth-child(1) { top: 0; left: 14%; }
+    .third-screen-imgs img:nth-child(2) { top: 0; left: 11%; }
+    .third-screen-imgs img:nth-child(3) { top: 0; left: 8%; }
+    .third-screen-imgs img:nth-child(4) { top: 0; left: 5%; }
+
+    .fourth-screen {
+        margin: -40px 0px 0px 20px; 
+    }
+
+    .third-screen-imgs:hover img:nth-child(1) { top: 75%; left: 32%; }
+    .third-screen-imgs:hover img:nth-child(2) { top: 75%; left: 5%; }
+    .third-screen-imgs:hover img:nth-child(3) { top: -5%; left: 5%; }
+    .third-screen-imgs:hover img:nth-child(4) { top: -5%; left: 32%; }
+
+    .fourth-screen-imgs img:nth-child(1) { top: 200%; right: 51%; }
+    .fourth-screen-imgs img:nth-child(2) { top: 200%; right: 54%; }
+    .fourth-screen-imgs img:nth-child(3) { top: 200%; right: 57%; }
+    .fourth-screen-imgs img:nth-child(4) { top: 200%; right: 60%; }
+
+    .fourth-screen-imgs:hover img:nth-child(1) { top: 285%; right: 48%; }
+    .fourth-screen-imgs:hover img:nth-child(2) { top: 285%; right: 74%; }
+    .fourth-screen-imgs:hover img:nth-child(3) { top: 205%; right: 74%; }
+    .fourth-screen-imgs:hover img:nth-child(4) { top: 205%; right: 48%; }
+
+    .fifth-screen {
+        margin: 360px 0px 0px 10px; 
+    }
+    .fifth-screen-content {
+        margin-right: 50px;
+        margin-left: 10px;
+    }
+    .carousel-slide {
+        width: 200px;
+    }
+    .carousel-frame img {
+        width: 230px;
+        margin: -20px -20px;
+    } 
+    .sixth-screen {
+        margin: 180px 0px 100px 0px;
+    }
+    .contacts-content {
+        width: 340px;
+        padding: 30px 20px 50px 25px;
+    }
+    .white-back-p-div {
+        margin: 100px 0px 0px 70px;
+    }  
+    footer {
+        padding: 40px 15px 30px 15px;
+    } 
+    footer span {
+        font-size: 16px;
+    }
 }
