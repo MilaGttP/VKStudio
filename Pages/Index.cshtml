@@ -30,8 +30,8 @@
 </section>
 
 <section class="third-screen" id="dyed">
-    <div class="flex-align">
-        <div>
+    <div class="flex-align dyed-div">
+        <div class="dyed-div-content">
             <div>
                 <div class="line"></div>
                 <h3 class="header-text">Фарбування</h3>
@@ -51,19 +51,21 @@
 </section>
 
 <section class="fourth-screen" id="cut">
-    <div class="flex-align">
+    <div class="flex-align cut-div">
         <div class="fourth-screen-imgs">
             @foreach (var image in ImageService.GetVisibleCutImages().Take(4))
             {
                 <img src="@image.URL" alt="@image.Name">
             }
         </div>
-        <div>
-            <div class="line"></div>
-            <h3 class="header-text">Стрижки</h3>
-            <div class="line"></div>
+        <div class="cut-div-content">
+            <div class="cut-div-content-text">
+                <div class="line"></div>
+                <h3 class="header-text">Стрижки</h3>
+                <div class="line"></div>
+            </div>
             <div class="act-container">
-                <a asp-page="/AllPhotos" class="gotoaction right-sided">Усі фото</a>
+                <a asp-page="/AllPhotos" class="gotoaction">Усі фото</a>
             </div>
         </div>
     </div>
@@ -99,7 +101,7 @@
                 <span class="center-span">Контакти</span>
                 <span class="names-span">Вікторія</span>
                 <div class="red-back-span-div">
-                    <span class="red-back-span">+380964954445</span>
+                    <span class="red-back-span">+380983078707</span>
                 </div>
                 <span class="names-span">Наталія</span>
                 <div class="red-back-span-div">
